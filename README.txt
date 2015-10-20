@@ -17,3 +17,6 @@ Problem Statements:
     t4 -> 4
     t1 -> 5
     t2 -> 6 and so on.. other threads should wait until there turn comes
+
+
+2. Next problem is "Sleeping Barber Problem" Please check on google if you are not sure about the problem
