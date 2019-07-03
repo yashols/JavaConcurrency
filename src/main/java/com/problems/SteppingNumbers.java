@@ -6,7 +6,7 @@ https://www.geeksforgeeks.org/stepping-numbers/
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-public class Sample
+public class SteppingNumbers
  {
 	public static void main (String[] args)
     {
