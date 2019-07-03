@@ -1,3 +1,7 @@
+
+/**
+Brute force solution. Ideal solution is BSF available on GeeksForGeeks.
+*/
 import java.util.*;
 import java.lang.*;
 import java.io.*;
