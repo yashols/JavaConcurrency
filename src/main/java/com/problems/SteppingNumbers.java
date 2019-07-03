@@ -1,6 +1,7 @@
 
 /**
 Brute force solution. Ideal solution is BSF available on GeeksForGeeks.
+https://www.geeksforgeeks.org/stepping-numbers/
 */
 import java.util.*;
 import java.lang.*;
