@@ -1,4 +1,4 @@
-package com.problems.first;
+package com.problems;
 
 /**
  * This class creates 4 thread and each thread prints its own number
@@ -12,7 +12,7 @@ package com.problems.first;
  *
  * @author Yashol
  */
-public class Solution1 {
+public class CountingPrint {
     public static final Object lock = new Object();
 
     public static void main(String arg[]) {
@@ -38,16 +38,16 @@ class CounterPrinter implements Runnable {
     }
 
     public void run() {
-        synchronized (Solution1.lock) {
+        synchronized (CountingPrint.lock) {
             while (counter.getCount() <= 20) {
                 try {
                     if (counter.getCount() % 4 != threadNumber) {
-                        Solution1.lock.wait();
+                        CountingPrint.lock.wait();
                     } else {
                         Thread.sleep(300);
                         System.out.println("Printed by Thread " + threadNumber + " counter - " + counter.getCount());
                         counter.setCount(counter.getCount() + 1);
-                        Solution1.lock.notifyAll();
+                        CountingPrint.lock.notifyAll();
                     }
                 } catch (Exception ie) {
                     ie.printStackTrace();

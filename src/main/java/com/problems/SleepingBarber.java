@@ -1,4 +1,4 @@
-package com.problems.second.solution1;
+package com.problems;
 
 /**
  * Created on 10/20/2015.
