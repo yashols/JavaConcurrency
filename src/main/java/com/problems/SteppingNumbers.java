@@ -1,11 +1,12 @@
-
+package com.problems;
 /**
 Brute force solution. Ideal solution is BSF available on GeeksForGeeks.
 https://www.geeksforgeeks.org/stepping-numbers/
 */
 import java.util.*;
 import java.lang.*;
-import java.io.*;
+
+
 public class SteppingNumbers
  {
 	public static void main (String[] args)
