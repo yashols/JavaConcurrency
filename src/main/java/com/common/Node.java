@@ -2,15 +2,21 @@ package com.common;
 
 public class Node {
 
-    private int data;
+    private Integer data;
     private Node left;
     private Node right;
 
-    public int getData() {
+    public Node(int value) {
+        this.data = value;
+        this.left = null;
+        this.right = null;
+    }
+
+    public Integer getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(Integer data) {
         this.data = data;
     }
 
