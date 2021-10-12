@@ -2,53 +2,66 @@ package com.problems;
 
 /**
  * Problem
- *  https://practice.geeksforgeeks.org/problems/rotate-doubly-linked-list-by-p-nodes/1
+ * https://practice.geeksforgeeks.org/problems/rotate-doubly-linked-list-by-p-nodes/1
  */
 //Initial Template for Java
-import java.util.*;
-import java.io.*;
-class Node {
-    int data;
-    Node prev, next;
 
-    public Node (int d){
-        this.data = d;
-        prev = null;
-        next = null;
-    }
+import java.util.Scanner;
+
+
+class Node
+{
+	int data;
+	Node prev, next;
+
+
+	public Node(int d)
+	{
+		this.data = d;
+		prev = null;
+		next = null;
+	}
 }
-public class RotateDoublyLinkedList {
 
-    static void display(Node node){
-        while(node != null){
-            System.out.print(node.data+" ");
-            node = node.next;
-        }
-        System.out.println();
-    }
+public class RotateDoublyLinkedList
+{
 
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while(t-- > 0){
-            int n = sc.nextInt();
-            int p = sc.nextInt();
+	static void display(Node node)
+	{
+		while (node != null)
+		{
+			System.out.print(node.data + " ");
+			node = node.next;
+		}
+		System.out.println();
+	}
 
-            //Entering the data
-            Node head = new Node(sc.nextInt());
-            Node curr = head;
 
-            //Entering the rest of the list
-            for(int i=0; i<n-1; i++){
-                int d = sc.nextInt();
-                curr.next = new Node(d);
-                curr = curr.next;
-            }
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while (t-- > 0)
+		{
+			int n = sc.nextInt();
+			int p = sc.nextInt();
 
-            Gfg obj = new Gfg();
-            display(obj.rotateP(head, p));
-        }
-    }
+			//Entering the data
+			Node head = new Node(sc.nextInt());
+			Node curr = head;
+
+			//Entering the rest of the list
+			for (int i = 0; i < n - 1; i++)
+			{
+				int d = sc.nextInt();
+				curr.next = new Node(d);
+				curr = curr.next;
+			}
+
+			Gfg obj = new Gfg();
+			display(obj.rotateP(head, p));
+		}
+	}
 }
 
 
@@ -66,20 +79,24 @@ class Node {
     }
 }
 */
-class Gfg {
-    Node rotateP (Node head, int p){
-        Node last = head;
-        while(last.next != null) {
-            last = last.next;
-        }
-        for(int i=0; i<p; ++i) {
-            Node current = head;
-            head = current.next;
-            current.next = null;
-            last.next = current;
-            current.prev = last;
-            last = current;
-        }
-        return head;
-    }
+class Gfg
+{
+	Node rotateP(Node head, int p)
+	{
+		Node last = head;
+		while (last.next != null)
+		{
+			last = last.next;
+		}
+		for (int i = 0; i < p; ++i)
+		{
+			Node current = head;
+			head = current.next;
+			current.next = null;
+			last.next = current;
+			current.prev = last;
+			last = current;
+		}
+		return head;
+	}
 }
