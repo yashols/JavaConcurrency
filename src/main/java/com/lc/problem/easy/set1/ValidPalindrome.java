@@ -9,7 +9,7 @@ public final class ValidPalindrome
 	public static void main(String[] args)
 	{
 		ValidPalindrome n = new ValidPalindrome();
-		String s = "abbʼa";
+		String s = "abba";
 		boolean response = n.isPalindrome(s);
 		System.out.println(response);
 	}
