@@ -17,7 +17,7 @@ public class ReverseQueue
 		int t = Integer.parseInt(br.readLine());
 		while (t-- > 0)
 		{
-			int n = Integer.parseInt(br.readLine());
+			//int n = Integer.parseInt(br.readLine());
 			Queue<Integer> q = new LinkedList<Integer>();
 			String s = br.readLine();
 			String[] a = s.split(" ");

@@ -20,6 +20,7 @@ public class SteppingNumbers
 			int totalSteppingNumbers = checkSteppingNumbers(n, m);
 			System.out.println(totalSteppingNumbers);
 		}
+		sc.close();
 	}
 
 

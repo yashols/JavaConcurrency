@@ -8,11 +8,11 @@ import java.util.HashMap;
  *
  * @author Yashol Sharma
  */
-public final class LC_167_TwoSum2
+public final class LC_0167_TwoSum2
 {
 
 	public static void main(String args[]) {
-		LC_167_TwoSum2 obj = new LC_167_TwoSum2();
+		LC_0167_TwoSum2 obj = new LC_0167_TwoSum2();
 		int[] numbers = {2,7,11,15};
 		int target = 9;
 		int[] response = obj.twoSum(numbers, target);

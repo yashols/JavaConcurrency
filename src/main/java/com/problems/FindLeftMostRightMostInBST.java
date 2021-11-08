@@ -38,6 +38,7 @@ public class FindLeftMostRightMostInBST
 		}
 		getRightMost(root);
 		getLeftMost(root);
+		sc.close();
 	}
 
 

@@ -1,4 +1,4 @@
-package com.sample.problem.easy.set1;
+package com.lc.problem.easy.set1;
 
 
 import java.util.Stack;
@@ -24,7 +24,7 @@ public class MinStack
 	//[[],[2147483646],[2147483646],[2147483647],[],[],[],[],[],[],[2147483647],[],[],[-2147483648],[],[],[],[]]
 	public static void main(String[] arg)
 	{
-		int a;
+		//int a;
 		MinStack minStack = new MinStack();
 		minStack.push(2147483646);
 		minStack.push(2147483646);

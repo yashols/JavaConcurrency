@@ -27,6 +27,7 @@ public class ReverseAnArrayOfNumbers
 			}
 			reverseArray(inputArray);
 		}
+		sc.close();
 	}
 
 

@@ -1,4 +1,4 @@
-package main.java.threads;
+package com.problems.random;
 
 /**
  * This class prints the no of processors on standard output stream.

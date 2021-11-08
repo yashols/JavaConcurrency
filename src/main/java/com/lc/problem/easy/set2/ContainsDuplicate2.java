@@ -1,4 +1,4 @@
-package com.sample.problem.easy.set2;
+package com.lc.problem.easy.set2;
 
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public final class ContainsDuplicate2
 
 	public boolean containsNearbyDuplicate(int[] nums, int k)
 	{
-		Map<Integer, ArrayList> values = new HashMap<Integer, ArrayList>();
+		Map<Integer, ArrayList<Integer>> values = new HashMap<Integer, ArrayList<Integer>>();
 		for (int i = 0; i < nums.length; ++i)
 		{
 			if (values.containsKey(nums[i]))
@@ -40,7 +40,7 @@ public final class ContainsDuplicate2
 			}
 			else
 			{
-				ArrayList l = new ArrayList();
+				ArrayList<Integer> l = new ArrayList<>();
 				l.add(i);
 				values.put(nums[i], l);
 			}

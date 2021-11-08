@@ -18,7 +18,7 @@ public final class BalancedBinaryTree
 		TreeNode ta2 = new TreeNode(20);
 		TreeNode tb1 = new TreeNode(15);
 		TreeNode tb2 = new TreeNode(7);
-		TreeNode st1 = new TreeNode(3);
+		//TreeNode st1 = new TreeNode(3);
 
 		t1.left = ta1;
 		t1.right = ta2;

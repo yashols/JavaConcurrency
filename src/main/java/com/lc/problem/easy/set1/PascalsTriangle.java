@@ -1,4 +1,4 @@
-package com.sample.problem.easy.set1;
+package com.lc.problem.easy.set1;
 
 
 import java.util.ArrayList;

@@ -2,3 +2,6 @@
 /.idea/codeStyles/**
 /.idea/libraries/**
 /.idea
+/target/
+/**/*.class
+/bin/

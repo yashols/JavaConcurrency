@@ -55,6 +55,7 @@ public class MoveZeroInFrontLinkedList
 			}
 			System.out.println();
 		}
+		sc.close();
 	}
 }
 

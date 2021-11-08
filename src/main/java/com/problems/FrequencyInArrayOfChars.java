@@ -28,21 +28,21 @@ public class FrequencyInArrayOfChars
 			while (q-- > 0)
 			{
 				char ch = sc.next().charAt(0);
-				Geeks obj = new Geeks();
 
 				if (ch == 'i')
 				{
 					char c = sc.next().charAt(0);
-					obj.insert(clist, c);
+					Geeks.insert(clist, c);
 				}
 
 				if (ch == 'f')
 				{
 					char c = sc.next().charAt(0);
-					obj.freq(clist, c);
+					Geeks.freq(clist, c);
 				}
 			}
 		}
+		sc.close();
 	}
 }
 

@@ -1,7 +1,6 @@
 package com.lc.problem.easy.set1;
 
 
-import java.util.Stack;
 
 import com.common.TreeNode;
 
@@ -11,9 +10,6 @@ import com.common.TreeNode;
  */
 public final class SymmetricTree
 {
-
-	private Stack<TreeNode> leftPath = new Stack<TreeNode>();
-	private Stack<TreeNode> rightPath = new Stack<TreeNode>();
 
 
 	public static void main(String arg[])

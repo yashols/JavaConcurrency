@@ -17,6 +17,7 @@ public class ReverseStringUsingStack
 			Solution obj = new Solution();
 			obj.reverse(sc.next());
 		}
+		sc.close();
 	}
 }
 

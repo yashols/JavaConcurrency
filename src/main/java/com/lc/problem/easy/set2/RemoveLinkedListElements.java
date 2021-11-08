@@ -26,7 +26,7 @@ public final class RemoveLinkedListElements
 		l4.next = l5;
 		l5.next = l6;
 		l6.next = l7;
-		ListNode l8 = null;
+		//ListNode l8 = null;
 		ListNode response = obj.removeElements(l1, 7);
 		while (response != null)
 		{

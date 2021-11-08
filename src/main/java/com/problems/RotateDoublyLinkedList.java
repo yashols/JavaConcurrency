@@ -58,9 +58,10 @@ public class RotateDoublyLinkedList
 				curr = curr.next;
 			}
 
-			Gfg obj = new Gfg();
+			Gfg1 obj = new Gfg1();
 			display(obj.rotateP(head, p));
 		}
+		sc.close();
 	}
 }
 
@@ -79,7 +80,7 @@ class Node {
     }
 }
 */
-class Gfg
+class Gfg1
 {
 	Node rotateP(Node head, int p)
 	{

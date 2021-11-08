@@ -9,8 +9,8 @@ class GetMinAtPopStack
 	{
 		int[] arr = {1, 6, 43, 1, 2, 0, 5};
 
-		Stack<Integer> mys = new GetMin()._push(arr, arr.length);
-		new GetMin()._getMinAtPop(mys);
+		Stack<Integer> mys = GetMin._push(arr, arr.length);
+		GetMin._getMinAtPop(mys);
 		System.out.println();
 
 	}

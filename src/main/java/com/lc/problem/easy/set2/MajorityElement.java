@@ -15,7 +15,7 @@ public final class MajorityElement
 	{
 		MajorityElement obj = new MajorityElement();
 		char[] a = {'c', 'a', 'a', 'a', 'c', 'b', 'b', 'a'};
-		int[] b = {2147483647};
+		//int[] b = {2147483647};
 		char response = obj.majorityElement(a);
 		System.out.println(response);
 	}
