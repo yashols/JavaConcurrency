@@ -1,17 +1,13 @@
 package com.lc.problem.easy.set1;
 
-
 import com.common.TreeNode;
-
 
 /**
  * @author Yashol Sharma
  */
-public final class LC_0112_Path_Sum
-{
+public final class LC_0112_Path_Sum {
 
-	public static void main(String arg[])
-	{
+	public static void main(String arg[]) {
 		LC_0112_Path_Sum obj = new LC_0112_Path_Sum();
 		TreeNode t1 = new TreeNode(1);
 		t1.left = new TreeNode(2);
@@ -21,24 +17,17 @@ public final class LC_0112_Path_Sum
 
 	}
 
-
-	public boolean hasPathSum(TreeNode root, int targetSum)
-	{
+	public boolean hasPathSum(TreeNode root, int targetSum) {
 		return hasPathSum(root, targetSum, 0);
 	}
 
-
-	public boolean hasPathSum(TreeNode root, int targetSum, int currentSum)
-	{
-		if (root == null)
-		{
+	public boolean hasPathSum(TreeNode root, int targetSum, int currentSum) {
+		if (root == null) {
 			return false;
 		}
 		currentSum = currentSum + root.val;
-		if (root.left == null && root.right == null)
-		{
-			if (currentSum == targetSum)
-			{
+		if (root.left == null && root.right == null) {
+			if (currentSum == targetSum) {
 				return true;
 			}
 		}

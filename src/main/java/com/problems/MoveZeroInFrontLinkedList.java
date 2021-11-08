@@ -5,42 +5,30 @@
 
 package com.problems;
 
-
 import java.util.Scanner;
 
-
-class NodeA
-{
+class NodeA {
 	int data;
 	NodeA next;
 
-
-	NodeA(int d)
-	{
+	NodeA(int d) {
 		data = d;
 		next = null;
 	}
 }
 
-public class MoveZeroInFrontLinkedList
-{
-	public static void main(String[] args)
-	{
+public class MoveZeroInFrontLinkedList {
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int t = 1;
-		while (t-- > 0)
-		{
+		while (t-- > 0) {
 			int n = 10;
 			NodeA head = null;
-			while (n-- > 0)
-			{
+			while (n-- > 0) {
 				int a = sc.nextInt();
-				if (head == null)
-				{
+				if (head == null) {
 					head = new NodeA(a);
-				}
-				else
-				{
+				} else {
 					NodeA temp = new NodeA(a);
 					temp.next = head;
 					head = temp;
@@ -48,8 +36,7 @@ public class MoveZeroInFrontLinkedList
 			}
 			ZeroFirst g = new ZeroFirst();
 			head = g.moveZeroes(head);
-			while (head != null)
-			{
+			while (head != null) {
 				System.out.print(head.data + " ");
 				head = head.next;
 			}
@@ -59,29 +46,21 @@ public class MoveZeroInFrontLinkedList
 	}
 }
 
-
-class ZeroFirst
-{
-	public NodeA moveZeroes(NodeA head)
-	{
+class ZeroFirst {
+	public NodeA moveZeroes(NodeA head) {
 		NodeA current = head;
 		NodeA forward = head;
-		while (forward.next != null)
-		{
-			if (current == forward)
-			{
+		while (forward.next != null) {
+			if (current == forward) {
 				forward = forward.next;
 				continue;
 			}
-			if (forward.data == 0)
-			{
+			if (forward.data == 0) {
 				current.next = forward.next;
 				forward.next = head;
 				head = forward;
 				forward = current.next;
-			}
-			else
-			{
+			} else {
 				current = forward;
 				forward = forward.next;
 			}

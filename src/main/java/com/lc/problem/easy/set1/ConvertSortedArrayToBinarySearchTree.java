@@ -1,42 +1,32 @@
 package com.lc.problem.easy.set1;
 
-
 import java.util.List;
 
 import com.common.TreeNode;
 
-
 /**
  * @author Yashol Sharma
  */
-public final class ConvertSortedArrayToBinarySearchTree
-{
+public final class ConvertSortedArrayToBinarySearchTree {
 
-	public static void main(String arg[])
-	{
+	public static void main(String arg[]) {
 		BinaryTreeInorderTraversal t = new BinaryTreeInorderTraversal();
 		ConvertSortedArrayToBinarySearchTree obj = new ConvertSortedArrayToBinarySearchTree();
-		int[] nums = {-10, -3, 0, 5, 9};
+		int[] nums = { -10, -3, 0, 5, 9 };
 		TreeNode n = obj.sortedArrayToBST(nums);
 		List<Integer> v = t.inorderTraversal(n);
-		for (int i : v)
-		{
+		for (int i : v) {
 			System.out.print(i + " -> ");
 		}
 	}
 
-
-	public TreeNode sortedArrayToBST(int[] nums)
-	{
+	public TreeNode sortedArrayToBST(int[] nums) {
 		TreeNode t = sortedArrayToBST(nums, 0, nums.length - 1);
 		return t;
 	}
 
-
-	public TreeNode sortedArrayToBST(int[] nums, int left, int right)
-	{
-		if (left > right)
-		{
+	public TreeNode sortedArrayToBST(int[] nums, int left, int right) {
+		if (left > right) {
 			return null;
 		}
 		int mid = left + (right - left) / 2;
@@ -46,24 +36,17 @@ public final class ConvertSortedArrayToBinarySearchTree
 		return t;
 	}
 
-
-	public String search(int[] a, int l, int r, int search)
-	{
-		if (l > r)
-		{
+	public String search(int[] a, int l, int r, int search) {
+		if (l > r) {
 			return "not found";
 		}
 		int mid = l + (r - l) / 2;
-		if (a[mid] == search)
-		{
+		if (a[mid] == search) {
 			return "found";
 		}
-		if (a[mid] > search)
-		{
+		if (a[mid] > search) {
 			return search(a, l, mid - 1, search);
-		}
-		else
-		{
+		} else {
 			return search(a, mid + 1, r, search);
 		}
 	}

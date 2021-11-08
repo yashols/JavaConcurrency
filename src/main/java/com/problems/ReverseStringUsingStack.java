@@ -5,15 +5,11 @@ package com.problems;
 import java.util.Scanner;
 import java.util.Stack;
 
-
-public class ReverseStringUsingStack
-{
-	public static void main(String[] args)
-	{
+public class ReverseStringUsingStack {
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
-		while (t-- > 0)
-		{
+		while (t-- > 0) {
 			Solution obj = new Solution();
 			obj.reverse(sc.next());
 		}
@@ -21,22 +17,19 @@ public class ReverseStringUsingStack
 	}
 }
 
+/*
+ * This is a function problem.You only need to complete the function given below
+ */
 
-/*This is a function problem.You only need to complete the function given below*/
+class Solution {
 
-class Solution
-{
-
-	public void reverse(String str)
-	{
+	public void reverse(String str) {
 		Stack<String> stack = new Stack<String>();
 		String[] split = str.split("");
-		for (int i = 0; i < split.length; ++i)
-		{
+		for (int i = 0; i < split.length; ++i) {
 			stack.push(split[i]);
 		}
-		while (!stack.isEmpty())
-		{
+		while (!stack.isEmpty()) {
 			System.out.print(stack.pop());
 		}
 		System.out.println("");

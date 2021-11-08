@@ -2,14 +2,12 @@ package com.lc.problem.easy.set3;
 
 import com.common.ListNode;
 
-
 /**
  * LC_0019_RemoveNthFromListFromEnd Description.
  *
  * @author Yashol Sharma
  */
-public final class LC_0019_RemoveNthFromListFromEnd
-{
+public final class LC_0019_RemoveNthFromListFromEnd {
 
 	public static void main(String[] args) {
 		LC_0019_RemoveNthFromListFromEnd obj = new LC_0019_RemoveNthFromListFromEnd();
@@ -20,31 +18,28 @@ public final class LC_0019_RemoveNthFromListFromEnd
 	}
 
 	public ListNode removeNthFromEnd(ListNode head, int n) {
-		if(head == null) {
+		if (head == null) {
 			return null;
 		}
 		int length = 0;
 		ListNode count = head;
-		while(count != null) {
+		while (count != null) {
 			length++;
 			count = count.next;
 		}
-		if(length == 1) {
+		if (length == 1) {
 			return new ListNode();
 		}
-		if(n == length) {
+		if (n == length) {
 			ListNode back = head;
-			for (int i = 0; i < length - n - 1; ++i)
-			{
+			for (int i = 0; i < length - n - 1; ++i) {
 				back = back.next;
 			}
 			back.next = null;
-		} else
-		{
+		} else {
 			ListNode back = head;
 			ListNode front = back.next;
-			for (int i = 0; i < length - n - 1; ++i)
-			{
+			for (int i = 0; i < length - n - 1; ++i) {
 				front = front.next;
 				back = back.next;
 			}

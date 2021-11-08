@@ -3,11 +3,8 @@ package com.problems;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
-public class ReverseFirstKElementsOfQueue
-{
-	public static void main(String[] args)
-	{
+public class ReverseFirstKElementsOfQueue {
+	public static void main(String[] args) {
 		int k = 3;
 		Queue<Integer> q = new LinkedList<Integer>();
 		q.add(1);
@@ -17,8 +14,7 @@ public class ReverseFirstKElementsOfQueue
 		q.add(5);
 		GfG g = new GfG();
 		Queue<Integer> ans = g.modifyQueue(q, k);
-		while (!ans.isEmpty())
-		{
+		while (!ans.isEmpty()) {
 			int a = ans.peek();
 			ans.poll();
 			System.out.print(a + " ");
@@ -28,24 +24,20 @@ public class ReverseFirstKElementsOfQueue
 	}
 }
 
-
-/*This is a function problem.You only need to complete the function given below*/
+/*
+ * This is a function problem.You only need to complete the function given below
+ */
 //User function Template for Java
-class GfG
-{
-	public Queue<Integer> modifyQueue(Queue<Integer> q, int k)
-	{
+class GfG {
+	public Queue<Integer> modifyQueue(Queue<Integer> q, int k) {
 		LinkedList<Integer> list = new LinkedList<Integer>();
-		for (int i = 0; i < k; ++i)
-		{
+		for (int i = 0; i < k; ++i) {
 			list.add(0, q.poll());
 		}
-		while (!q.isEmpty())
-		{
+		while (!q.isEmpty()) {
 			list.add(q.poll());
 		}
-		for (int i = 0; i < list.size(); ++i)
-		{
+		for (int i = 0; i < list.size(); ++i) {
 			q.add(list.get(i));
 		}
 		return q;

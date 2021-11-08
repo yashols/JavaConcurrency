@@ -26,26 +26,26 @@ public final class BinaryTreePostorderTraversal {
 
 	public List<Integer> postOrderTraversal(TreeNode root) {
 		List<Integer> response = new ArrayList<Integer>();
-        if(root == null) {
-            return response;
-        }
-        
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        stack.push(root);
-        while(!stack.isEmpty()) {
-            
-            TreeNode current = stack.pop();
-            response.add(0, current.val);
-            if(current.left != null) {
-                stack.push(current.left);
-            }
-            if(current.right != null) {
-                stack.push(current.right);
-            }
-            
-        }
-        
-        return response;
+		if (root == null) {
+			return response;
+		}
+
+		Stack<TreeNode> stack = new Stack<TreeNode>();
+		stack.push(root);
+		while (!stack.isEmpty()) {
+
+			TreeNode current = stack.pop();
+			response.add(0, current.val);
+			if (current.left != null) {
+				stack.push(current.left);
+			}
+			if (current.right != null) {
+				stack.push(current.right);
+			}
+
+		}
+
+		return response;
 	}
 
 }

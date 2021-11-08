@@ -2,15 +2,12 @@ package com.lc.problem.easy.set1;
 
 import com.common.ListNode;
 
-
 /**
  * @author Yashol Sharma
  */
-public final class RemoveDuplicatesFromSortedList
-{
+public final class RemoveDuplicatesFromSortedList {
 
-	public static void main(String args[])
-	{
+	public static void main(String args[]) {
 		// 1 -> 4 -> 8 -> 45
 		ListNode a4 = new ListNode(45);
 		ListNode a3 = new ListNode(8, a4);
@@ -18,31 +15,21 @@ public final class RemoveDuplicatesFromSortedList
 		ListNode a11 = new ListNode(4, a2);
 		ListNode a1 = new ListNode(1, a11);
 
-
 		RemoveDuplicatesFromSortedList obj = new RemoveDuplicatesFromSortedList();
 		ListNode response = obj.deleteDuplicates(a1);
-		do
-		{
+		do {
 			System.out.print(response.getVal() + " -> ");
 			response = response.getNext();
-		}
-		while (response != null);
-
+		} while (response != null);
 
 	}
 
-
-	public ListNode deleteDuplicates(ListNode head)
-	{
+	public ListNode deleteDuplicates(ListNode head) {
 		ListNode node = head;
-		while (node != null && node.next != null)
-		{
-			if (node.val == node.next.val)
-			{
+		while (node != null && node.next != null) {
+			if (node.val == node.next.val) {
 				node.next = node.next.next;
-			}
-			else
-			{
+			} else {
 				node = node.next;
 			}
 		}

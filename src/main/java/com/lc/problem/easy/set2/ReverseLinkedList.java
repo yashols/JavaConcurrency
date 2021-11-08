@@ -1,19 +1,15 @@
 package com.lc.problem.easy.set2;
 
-
 import java.util.Stack;
 
 import com.common.ListNode;
 
-
 /**
  * @author Yashol Sharma
  */
-public final class ReverseLinkedList
-{
+public final class ReverseLinkedList {
 
-	public static void main(String args[])
-	{
+	public static void main(String args[]) {
 		ReverseLinkedList obj = new ReverseLinkedList();
 		ListNode l1 = new ListNode(1);
 		ListNode l2 = new ListNode(2);
@@ -29,52 +25,39 @@ public final class ReverseLinkedList
 		l5.next = l6;
 		l6.next = l7;
 		ListNode response = obj.reverseList(l1);
-		while (response != null)
-		{
+		while (response != null) {
 			System.out.println(response.val + " -> ");
 			response = response.next;
 		}
 	}
 
-
-	public ListNode reverseList(ListNode head)
-	{
+	public ListNode reverseList(ListNode head) {
 		ListNode tail = new ListNode();
 		reverseList(head, tail);
 		return tail;
 	}
 
-
-	public ListNode reverseList(ListNode head, ListNode tail)
-	{
-		if (head == null)
-		{
+	public ListNode reverseList(ListNode head, ListNode tail) {
+		if (head == null) {
 			return null;
 		}
 		tail.next = reverseList(head.next, tail);
 		return tail;
 	}
 
-
-	public ListNode reverseList1(ListNode head)
-	{
+	public ListNode reverseList1(ListNode head) {
 		Stack<ListNode> stack = new Stack<ListNode>();
 		ListNode tail = null;
 		ListNode curr = null;
-		while (head != null)
-		{
+		while (head != null) {
 			stack.push(head);
 			head = head.next;
 		}
-		while (!stack.isEmpty())
-		{
-			if (tail == null)
-			{
+		while (!stack.isEmpty()) {
+			if (tail == null) {
 				curr = stack.pop();
 				tail = curr;
-			}
-			else
-			{
+			} else {
 				curr.next = stack.pop();
 				curr = curr.next;
 				curr.next = null;

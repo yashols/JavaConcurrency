@@ -1,12 +1,9 @@
 package com.common;
 
-public class PrintBST
-{
+public class PrintBST {
 
-	public static void preOrder(Node node)
-	{
-		if (node == null)
-		{
+	public static void preOrder(Node node) {
+		if (node == null) {
 			return;
 		}
 		System.out.print(node.getData() + " ");
@@ -14,11 +11,8 @@ public class PrintBST
 		preOrder(node.getRight());
 	}
 
-
-	public static void inOrder(Node node)
-	{
-		if (node == null)
-		{
+	public static void inOrder(Node node) {
+		if (node == null) {
 			return;
 		}
 		inOrder(node.getLeft());
@@ -26,11 +20,8 @@ public class PrintBST
 		inOrder(node.getRight());
 	}
 
-
-	public static void postOrder(Node node)
-	{
-		if (node == null)
-		{
+	public static void postOrder(Node node) {
+		if (node == null) {
 			return;
 		}
 		postOrder(node.getLeft());

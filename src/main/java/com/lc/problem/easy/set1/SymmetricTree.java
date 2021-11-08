@@ -1,19 +1,13 @@
 package com.lc.problem.easy.set1;
 
-
-
 import com.common.TreeNode;
-
 
 /**
  * @author Yashol Sharma
  */
-public final class SymmetricTree
-{
+public final class SymmetricTree {
 
-
-	public static void main(String arg[])
-	{
+	public static void main(String arg[]) {
 		SymmetricTree obj = new SymmetricTree();
 		TreeNode t1 = new TreeNode(1);
 		TreeNode t2a = new TreeNode(2);
@@ -31,26 +25,19 @@ public final class SymmetricTree
 		System.out.print(v);
 	}
 
-
-	public boolean isSymmetric(TreeNode root)
-	{
-		if (root == null)
-		{
+	public boolean isSymmetric(TreeNode root) {
+		if (root == null) {
 			return true;
 		}
 		return isSymmetric(root.left, root.right);
 	}
 
-
-	public boolean isSymmetric(TreeNode leftSide, TreeNode rightSide)
-	{
-		if (leftSide == null && rightSide == null)
-		{
+	public boolean isSymmetric(TreeNode leftSide, TreeNode rightSide) {
+		if (leftSide == null && rightSide == null) {
 			return true;
 		}
 
-		if (leftSide == null || rightSide == null || leftSide.val != rightSide.val)
-		{
+		if (leftSide == null || rightSide == null || leftSide.val != rightSide.val) {
 			return false;
 		}
 		return isSymmetric(leftSide.left, rightSide.right) && isSymmetric(leftSide.right, rightSide.left);

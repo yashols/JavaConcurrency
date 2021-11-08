@@ -5,11 +5,9 @@ package com.problems;
  *
  * @author Yashol
  */
-public class SleepingBarber
-{
+public class SleepingBarber {
 
-	public static void main(String arg[])
-	{
+	public static void main(String arg[]) {
 		System.out.println("First solution");
 	}
 

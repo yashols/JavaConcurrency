@@ -5,30 +5,22 @@ package com.lc.problem.medium;
  *
  * @author Yashol Sharma
  */
-public final class LC_0994_Rotting_Oranges
-{
+public final class LC_0994_Rotting_Oranges {
 
-	public static void main(String args[])
-	{
+	public static void main(String args[]) {
 		LC_0994_Rotting_Oranges obj = new LC_0994_Rotting_Oranges();
-		int[][] grid1 = {{2,0,1,1,1,1,1,1,1,1},
-						{1,0,1,0,0,0,0,0,0,1},
-						{1,0,1,0,1,1,1,1,0,1},
-						{1,0,1,0,1,0,0,1,0,1},
-						{1,0,1,0,1,0,0,1,0,1},
-						{1,0,1,0,1,1,0,1,0,1},
-						{1,0,1,0,0,0,0,1,0,1},
-						{1,0,1,1,1,1,1,1,0,1},
-						{1,0,0,0,0,0,0,0,0,1},
-						{1,1,1,1,1,1,1,1,1,1}};
-		int[][] grid = {{2,1,1},
-						 {1,1,0},
-						 {0,1,1}};
+		int[][] grid1 = { { 2, 0, 1, 1, 1, 1, 1, 1, 1, 1 }, { 1, 0, 1, 0, 0, 0, 0, 0, 0, 1 },
+				{ 1, 0, 1, 0, 1, 1, 1, 1, 0, 1 }, { 1, 0, 1, 0, 1, 0, 0, 1, 0, 1 }, { 1, 0, 1, 0, 1, 0, 0, 1, 0, 1 },
+				{ 1, 0, 1, 0, 1, 1, 0, 1, 0, 1 }, { 1, 0, 1, 0, 0, 0, 0, 1, 0, 1 }, { 1, 0, 1, 1, 1, 1, 1, 1, 0, 1 },
+				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
+		int[][] grid = { { 2, 1, 1 }, { 1, 1, 0 }, { 0, 1, 1 } };
 		print(grid1);
 		print(grid);
-		System.out.println("");System.out.println("");
+		System.out.println("");
+		System.out.println("");
 		int response = obj.orangesRotting(grid);
-		System.out.println("");System.out.println("");
+		System.out.println("");
+		System.out.println("");
 		print(grid);
 		System.out.println(response);
 	}
@@ -44,8 +36,7 @@ public final class LC_0994_Rotting_Oranges
 
 	private int allOnes = 0;
 
-	public int orangesRotting(int[][] grid)
-	{
+	public int orangesRotting(int[][] grid) {
 
 		int response = 0;
 		int initial = 2;
@@ -57,7 +48,7 @@ public final class LC_0994_Rotting_Oranges
 				}
 			}
 		}
-		while(!allRotten) {
+		while (!allRotten) {
 			allRotten = true;
 			boolean updated = false;
 			for (int row = 0; row < grid.length; ++row) {
@@ -76,33 +67,31 @@ public final class LC_0994_Rotting_Oranges
 			}
 			initial++;
 		}
-		if(allOnes != 0) {
+		if (allOnes != 0) {
 			return -1;
 		}
 		return response;
 	}
 
-
-	public boolean setAdjacentRotten(int[][] grid, int row, int col, int initial)
-	{
+	public boolean setAdjacentRotten(int[][] grid, int row, int col, int initial) {
 		boolean response = false;
 		if (row > 0 && grid[row - 1][col] == 1) {
-			grid[row - 1][col] = initial+1;
+			grid[row - 1][col] = initial + 1;
 			allOnes--;
 			response = true;
 		}
 		if (row < grid.length - 1 && grid[row + 1][col] == 1) {
-			grid[row + 1][col] = initial+1;
+			grid[row + 1][col] = initial + 1;
 			allOnes--;
 			response = true;
 		}
 		if (col > 0 && grid[row][col - 1] == 1) {
-			grid[row][col - 1] = initial+1;
+			grid[row][col - 1] = initial + 1;
 			allOnes--;
 			response = true;
 		}
 		if (col < grid[row].length - 1 && grid[row][col + 1] == 1) {
-			grid[row][col + 1] = initial+1;
+			grid[row][col + 1] = initial + 1;
 			allOnes--;
 			response = true;
 		}

@@ -1,17 +1,13 @@
 package com.lc.problem.easy.set1;
 
-
 import com.common.TreeNode;
-
 
 /**
  * @author Yashol Sharma
  */
-public final class MinimumDepthOfBinaryTree
-{
+public final class MinimumDepthOfBinaryTree {
 
-	public static void main(String arg[])
-	{
+	public static void main(String arg[]) {
 		MinimumDepthOfBinaryTree obj = new MinimumDepthOfBinaryTree();
 		TreeNode t1 = new TreeNode(3);
 		TreeNode ta1 = new TreeNode(9);
@@ -42,29 +38,22 @@ public final class MinimumDepthOfBinaryTree
 		System.out.print(v + " -> ");
 	}
 
-
-	public int minDepth(TreeNode root)
-	{
-		if (root == null)
-		{
+	public int minDepth(TreeNode root) {
+		if (root == null) {
 			return 0;
 		}
-		if (root.left == null && root.right == null)
-		{
+		if (root.left == null && root.right == null) {
 			return 1;
 		}
-		if (root.left == null)
-		{
+		if (root.left == null) {
 			return minDepth(root.right) + 1;
 		}
-		if (root.right == null)
-		{
+		if (root.right == null) {
 			return minDepth(root.left) + 1;
 		}
 		int left = minDepth(root.left) + 1;
 		int right = minDepth(root.right) + 1;
 		return left < right ? left : right;
 	}
-
 
 }

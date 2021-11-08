@@ -2,14 +2,12 @@ package com.lc.problem.easy.set3;
 
 import com.common.ListNode;
 
-
 /**
  * LC_0206_Reverse_Linked_List Description.
  *
  * @author Yashol Sharma
  */
-public final class LC_0206_Reverse_Linked_List
-{
+public final class LC_0206_Reverse_Linked_List {
 
 	public static void main(String args[]) {
 		LC_0206_Reverse_Linked_List obj = new LC_0206_Reverse_Linked_List();
@@ -19,19 +17,19 @@ public final class LC_0206_Reverse_Linked_List
 		head.next.next.next = new ListNode(4);
 		head.next.next.next.next = new ListNode(5);
 		ListNode response = obj.reverseList(head);
-		while(response != null) {
+		while (response != null) {
 			System.out.println(response.val + "->");
 			response = response.next;
 		}
 	}
 
 	public ListNode reverseList(ListNode head) {
-		if(head == null) {
+		if (head == null) {
 			return null;
 		}
 		ListNode currentNode = head;
 		ListNode nextNode = head.next;
-		while(nextNode != null) {
+		while (nextNode != null) {
 			currentNode.next = nextNode.next;
 			nextNode.next = head;
 			head = nextNode;

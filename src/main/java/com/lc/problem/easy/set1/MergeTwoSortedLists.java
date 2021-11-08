@@ -2,15 +2,12 @@ package com.lc.problem.easy.set1;
 
 import com.common.ListNode;
 
-
 /**
  * @author Yashol Sharma
  */
-public final class MergeTwoSortedLists
-{
+public final class MergeTwoSortedLists {
 
-	public static void main(String args[])
-	{
+	public static void main(String args[]) {
 		// 1 -> 4 -> 8 -> 45
 		ListNode l145 = new ListNode(45);
 		ListNode l18 = new ListNode(8, l145);
@@ -26,25 +23,20 @@ public final class MergeTwoSortedLists
 
 		MergeTwoSortedLists obj = new MergeTwoSortedLists();
 		ListNode response = obj.mergeTwoLists(l11, l21);
-		do
-		{
+		do {
 			System.out.print(response.getVal() + " -> ");
 			response = response.getNext();
-		}
-		while (response != null);
+		} while (response != null);
 
 		System.out.println("");
 		/////////////////////////////////////////////
 		obj = new MergeTwoSortedLists();
 		response = obj.mergeTwoLists(null, null);
-		if (response != null)
-		{
-			do
-			{
+		if (response != null) {
+			do {
 				System.out.print(response.getVal() + " -> ");
 				response = response.getNext();
-			}
-			while (response != null);
+			} while (response != null);
 		}
 		System.out.println("");
 		/////////////////////////////////////////////
@@ -52,64 +44,47 @@ public final class MergeTwoSortedLists
 		/////////////////////////////////////////////
 		obj = new MergeTwoSortedLists();
 		response = obj.mergeTwoLists(null, new ListNode(3, new ListNode(5, new ListNode(99))));
-		do
-		{
+		do {
 			System.out.print(response.getVal() + " -> ");
 			response = response.getNext();
-		}
-		while (response != null);
+		} while (response != null);
 		System.out.println("");
 		/////////////////////////////////////////////
 	}
 
-
-	ListNode mergeTwoLists(ListNode l1, ListNode l2)
-	{
-		if (l1 == null)
-		{
+	ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+		if (l1 == null) {
 			return l2;
 		}
-		if (l2 == null)
-		{
+		if (l2 == null) {
 			return l1;
 		}
 		ListNode response = null;
 		ListNode index = null;
 		ListNode newNode = null;
 
-		while (true)
-		{
-			if (l1.getVal() <= l2.getVal())
-			{
+		while (true) {
+			if (l1.getVal() <= l2.getVal()) {
 				newNode = new ListNode(l1.getVal());
 				l1 = l1.getNext();
-			}
-			else
-			{
+			} else {
 				newNode = new ListNode(l2.getVal());
 				l2 = l2.getNext();
 			}
-			if (index == null)
-			{
+			if (index == null) {
 				index = newNode;
 				response = index;
-			}
-			else
-			{
+			} else {
 				index.setNext(newNode);
 				index = newNode;
 			}
-			if (l1 == null || l2 == null)
-			{
+			if (l1 == null || l2 == null) {
 				break;
 			}
 		}
-		if (l1 == null)
-		{
+		if (l1 == null) {
 			index.setNext(l2);
-		}
-		else
-		{
+		} else {
 			index.setNext(l1);
 		}
 		return response;

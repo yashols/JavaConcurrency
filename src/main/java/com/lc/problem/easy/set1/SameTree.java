@@ -1,17 +1,13 @@
 package com.lc.problem.easy.set1;
 
-
 import com.common.TreeNode;
-
 
 /**
  * @author Yashol Sharma
  */
-public final class SameTree
-{
+public final class SameTree {
 
-	public static void main(String arg[])
-	{
+	public static void main(String arg[]) {
 		SameTree obj = new SameTree();
 		TreeNode t1 = new TreeNode(2);
 		TreeNode t2 = new TreeNode(3);
@@ -30,19 +26,14 @@ public final class SameTree
 
 	}
 
-
-	public boolean isSameTree(TreeNode p, TreeNode q)
-	{
-		if (p == null && q == null)
-		{
+	public boolean isSameTree(TreeNode p, TreeNode q) {
+		if (p == null && q == null) {
 			return true;
 		}
-		if (p == null || q == null || p.val != q.val)
-		{
+		if (p == null || q == null || p.val != q.val) {
 			return false;
 		}
 		return isSameTree(p.left, q.left) ? isSameTree(p.right, q.right) ? true : false : false;
 	}
-
 
 }

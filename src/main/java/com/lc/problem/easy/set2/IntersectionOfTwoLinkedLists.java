@@ -2,15 +2,12 @@ package com.lc.problem.easy.set2;
 
 import com.common.ListNode;
 
-
 /**
  * @author Yashol Sharma
  */
-public final class IntersectionOfTwoLinkedLists
-{
+public final class IntersectionOfTwoLinkedLists {
 
-	public static void main(String args[])
-	{
+	public static void main(String args[]) {
 		IntersectionOfTwoLinkedLists obj = new IntersectionOfTwoLinkedLists();
 		ListNode a1 = new ListNode(4);
 		ListNode a2 = new ListNode(1);
@@ -31,17 +28,13 @@ public final class IntersectionOfTwoLinkedLists
 		System.out.println(listNode);
 	}
 
-
-	public ListNode getIntersectionNode(ListNode headA, ListNode headB)
-	{
-		if (headA == null || headA == null)
-		{
+	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+		if (headA == null || headA == null) {
 			return null;
 		}
 		ListNode currA = headA;
 		ListNode currB = headB;
-		while (currA != currB)
-		{
+		while (currA != currB) {
 			currA = currA == null ? headB : currA.next;
 			currB = currB == null ? headA : currB.next;
 		}

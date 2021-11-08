@@ -2,14 +2,12 @@ package com.lc.problem.easy.set2;
 
 import com.common.TreeNode;
 
-
 /**
  * MaxDepthOfBinaryTreeRecursive Description.
  *
  * @author Yashol Sharma
  */
-public final class MaxDepthOfBinaryTreeRecursive
-{
+public final class MaxDepthOfBinaryTreeRecursive {
 
 	public static void main(String args[]) {
 		TreeNode root = new TreeNode(3);
@@ -22,9 +20,8 @@ public final class MaxDepthOfBinaryTreeRecursive
 		System.out.println(response);
 	}
 
-
 	public int maxDepth(TreeNode root) {
-		if(root == null) {
+		if (root == null) {
 			return 0;
 		}
 		int leftDepth = maxDepth(root.left) + 1;

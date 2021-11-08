@@ -14,7 +14,6 @@ public final class LC_0005_Longest_Palindromic_Substring {
 		System.out.println(response);
 	}
 
-
 	public String longestPalindrome(String s) {
 		String response = "";
 		int max = 0;
@@ -31,7 +30,6 @@ public final class LC_0005_Longest_Palindromic_Substring {
 		}
 		return response;
 	}
-
 
 	private boolean isPalindrome(final String sub) {
 		for (int i = 0; i < sub.length() / 2; ++i) {

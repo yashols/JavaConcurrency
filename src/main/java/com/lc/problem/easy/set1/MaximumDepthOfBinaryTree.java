@@ -1,14 +1,10 @@
 package com.lc.problem.easy.set1;
 
-
 import com.common.TreeNode;
 
+public final class MaximumDepthOfBinaryTree {
 
-public final class MaximumDepthOfBinaryTree
-{
-
-	public static void main(String arg[])
-	{
+	public static void main(String arg[]) {
 		MaximumDepthOfBinaryTree obj = new MaximumDepthOfBinaryTree();
 		TreeNode t1 = new TreeNode(3);
 		TreeNode t2 = new TreeNode(9);
@@ -26,15 +22,11 @@ public final class MaximumDepthOfBinaryTree
 
 	}
 
-
-	public int maxDepth(TreeNode root)
-	{
-		if (root == null)
-		{
+	public int maxDepth(TreeNode root) {
+		if (root == null) {
 			return 0;
 		}
 		return Math.max(maxDepth(root.left) + 1, maxDepth(root.right) + 1);
 	}
-
 
 }

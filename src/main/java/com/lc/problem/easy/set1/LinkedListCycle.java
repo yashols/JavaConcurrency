@@ -1,17 +1,13 @@
 package com.lc.problem.easy.set1;
 
-
 import com.common.ListNode;
-
 
 /**
  * @author Yashol Sharma
  */
-public final class LinkedListCycle
-{
+public final class LinkedListCycle {
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		LinkedListCycle n = new LinkedListCycle();
 		ListNode l1 = new ListNode(3);
 		ListNode l2 = new ListNode(2);
@@ -25,15 +21,11 @@ public final class LinkedListCycle
 		System.out.println(response);
 	}
 
-
-	public boolean hasCycle(ListNode head)
-	{
+	public boolean hasCycle(ListNode head) {
 		ListNode twoSteps = head;
-		while (twoSteps != null && twoSteps.next != null && twoSteps.next.next != null)
-		{
+		while (twoSteps != null && twoSteps.next != null && twoSteps.next.next != null) {
 			twoSteps = twoSteps.next.next;
-			if (head == twoSteps)
-			{
+			if (head == twoSteps) {
 				return true;
 			}
 			head = head.next;

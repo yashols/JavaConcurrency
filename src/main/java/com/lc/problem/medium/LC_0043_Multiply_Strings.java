@@ -5,14 +5,12 @@ package com.lc.problem.medium;
  *
  * @author Yashol Sharma
  */
-public final class LC_0043_Multiply_Strings
-{
+public final class LC_0043_Multiply_Strings {
 
 	public static void main(String args[]) {
 		LC_0043_Multiply_Strings obj = new LC_0043_Multiply_Strings();
-		obj.multiply("12","16");
+		obj.multiply("12", "16");
 	}
-
 
 	public String multiply(String num1, String num2) {
 		if ("0".equals(num1) || "0".equals(num2))
