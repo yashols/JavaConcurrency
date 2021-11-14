@@ -19,8 +19,23 @@ public final class LC_0096_Unique_Binary_Search_Trees {
 		}
 
 		int response = 0;
-
+		int[] nums = new int[n];
+		for(int i = 1; i <= n; ++i) {
+			nums[i-1] = i;
+		}
+		response = numTrees(nums);
 		return response;
+	}
+	
+	public int numTrees(int[] nums) {
+		
+		for(int i=0; i<nums.length; ++i) {
+			int[] left = new int[i-1];
+			int[] right = new int[nums.length - i - 1];
+			numTrees(left);
+			numTrees(right);
+		}
+		return 0;
 	}
 
 }
