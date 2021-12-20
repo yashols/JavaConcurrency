@@ -9,7 +9,7 @@ import com.common.ListNode;
  */
 public final class LC_0024_Swap_Nodes_Pairs {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		LC_0024_Swap_Nodes_Pairs obj = new LC_0024_Swap_Nodes_Pairs();
 		ListNode root = new ListNode(1);
 		root.next = new ListNode(2);

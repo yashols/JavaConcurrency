@@ -7,10 +7,10 @@ package com.lc.problem.medium;
  */
 public final class LC_0130_Surrounded_Regions {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		LC_0130_Surrounded_Regions obj = new LC_0130_Surrounded_Regions();
 
-		final char[][] board = { { 'O', 'O' }, { 'O', 'O' } };
+		final char[][] board = {{'O', 'O'}, {'O', 'O'}};
 		obj.solve(board);
 	}
 

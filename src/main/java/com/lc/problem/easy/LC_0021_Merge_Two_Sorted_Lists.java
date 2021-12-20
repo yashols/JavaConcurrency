@@ -1,4 +1,4 @@
-package com.lc.problem.easy.set3;
+package com.lc.problem.easy;
 
 import com.common.ListNode;
 
@@ -9,7 +9,7 @@ import com.common.ListNode;
  */
 public final class LC_0021_Merge_Two_Sorted_Lists {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		LC_0021_Merge_Two_Sorted_Lists obj = new LC_0021_Merge_Two_Sorted_Lists();
 		ListNode l1 = new ListNode(1);
 		l1.next = new ListNode(2);

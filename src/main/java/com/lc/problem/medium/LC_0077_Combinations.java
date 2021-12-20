@@ -11,7 +11,7 @@ import java.util.List;
  */
 public final class LC_0077_Combinations {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		LC_0077_Combinations obj = new LC_0077_Combinations();
 		int n = 4;
 		int k = 2;

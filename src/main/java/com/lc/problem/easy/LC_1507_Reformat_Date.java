@@ -1,11 +1,11 @@
-package com.lc.problem.easy.set3;
+package com.lc.problem.easy;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class LC_1507_Reformat_Date {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		LC_1507_Reformat_Date obj = new LC_1507_Reformat_Date();
 		String response = obj.reformatDate("20th Feb 2052");
 		System.out.print(response);

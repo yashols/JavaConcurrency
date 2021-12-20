@@ -18,7 +18,7 @@ public final class LC_0096_Unique_Binary_Search_Trees {
 			return 0;
 		}
 
-		int response = 0;
+		int response;
 		int[] nums = new int[n];
 		for(int i = 1; i <= n; ++i) {
 			nums[i-1] = i;

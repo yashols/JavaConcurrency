@@ -2,9 +2,10 @@ package com.common;
 
 public class Node {
 
-	private Integer data;
-	private Node left;
-	private Node right;
+	public Integer data;
+	public Node left;
+	public Node right;
+	public Node next;
 
 	public Node(int value) {
 		this.data = value;

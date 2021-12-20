@@ -1,4 +1,4 @@
-package com.lc.problem.easy.set3;
+package com.lc.problem.easy;
 
 /**
  * LC_0567_Permutation_In_String Description.

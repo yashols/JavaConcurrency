@@ -7,10 +7,11 @@ package com.lc.problem.medium;
  */
 public final class LC_0011_Container_With_Most_Water {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		LC_0011_Container_With_Most_Water obj = new LC_0011_Container_With_Most_Water();
-		int[] height = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
-		obj.maxArea(height);
+		int[] height = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+		int result = obj.maxArea(height);
+		System.out.println(result);
 	}
 
 	public int maxArea(int[] height) {

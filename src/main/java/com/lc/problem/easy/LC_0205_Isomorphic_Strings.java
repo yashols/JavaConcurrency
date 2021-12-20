@@ -1,4 +1,4 @@
-package com.lc.problem.easy.set3;
+package com.lc.problem.easy;
 
 import java.util.HashMap;
 import java.util.Map;

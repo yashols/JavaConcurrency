@@ -1,7 +1,6 @@
 package com.lc.problem.hard;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 import com.common.ListNode;
 
@@ -26,12 +25,9 @@ public static void main(String args[]) {
 	
 public ListNode mergeKLists(ListNode[] lists) {
         
-        List<ListNode> finalList = new ArrayList<>();
         int totalLists = lists.length;
         int[] tracker = new int[totalLists];
         ListNode head = null;
-        boolean listComplete = false;
-        int start = 0;
         while(true) {
             
             for(int listIndex : tracker) {
@@ -40,7 +36,6 @@ public ListNode mergeKLists(ListNode[] lists) {
                 
                 if(tracker[listIndex] >= list.val) {
                     tracker[listIndex] = -1;
-                    listComplete = true;
                 } else {
                     
                 }

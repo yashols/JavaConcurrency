@@ -1,4 +1,4 @@
-package com.lc.problem.easy.set1;
+package com.lc.problem.easy;
 
 import com.common.TreeNode;
 
