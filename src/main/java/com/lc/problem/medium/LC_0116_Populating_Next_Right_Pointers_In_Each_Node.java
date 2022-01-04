@@ -1,4 +1,4 @@
-package com.lc.problem.medium.set2;
+package com.lc.problem.medium;
 
 import com.common.Node;
 
