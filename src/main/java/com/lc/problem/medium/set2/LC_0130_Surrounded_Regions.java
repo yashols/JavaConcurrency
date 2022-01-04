@@ -1,4 +1,4 @@
-package com.lc.problem.medium;
+package com.lc.problem.medium.set2;
 
 /**
  * LC_0130_Surrounded_Regions Description.

@@ -1,4 +1,4 @@
-package com.lc.problem.medium;
+package com.lc.problem.medium.set1;
 
 /**
  * LC_0005_Longest_Palindromic_Substring Description.

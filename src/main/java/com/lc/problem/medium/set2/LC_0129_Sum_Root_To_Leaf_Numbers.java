@@ -1,4 +1,4 @@
-package com.lc.problem.medium;
+package com.lc.problem.medium.set2;
 
 import com.common.TreeNode;
 

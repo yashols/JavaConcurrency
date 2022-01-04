@@ -1,4 +1,4 @@
-package com.lc.problem.medium;
+package com.lc.problem.medium.set1;
 
 import java.util.ArrayList;
 import java.util.List;

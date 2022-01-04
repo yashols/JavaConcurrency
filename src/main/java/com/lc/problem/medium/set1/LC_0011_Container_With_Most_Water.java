@@ -1,4 +1,4 @@
-package com.lc.problem.medium;
+package com.lc.problem.medium.set1;
 
 /**
  * LC_0011_Container_With_Most_Water Description.
