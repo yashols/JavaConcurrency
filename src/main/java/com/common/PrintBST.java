@@ -29,4 +29,31 @@ public class PrintBST {
 		System.out.print(node.getData() + " ");
 	}
 
+	public static void preOrder(TreeNode node) {
+		if (node == null) {
+			return;
+		}
+		System.out.print(node.val + " ");
+		preOrder(node.left);
+		preOrder(node.right);
+	}
+
+	public static void inOrder(TreeNode node) {
+		if (node == null) {
+			return;
+		}
+		inOrder(node.left);
+		System.out.print(node.val + " ");
+		inOrder(node.right);
+	}
+
+	public static void postOrder(TreeNode node) {
+		if (node == null) {
+			return;
+		}
+		postOrder(node.left);
+		postOrder(node.right);
+		System.out.print(node.val + " ");
+	}
+
 }
