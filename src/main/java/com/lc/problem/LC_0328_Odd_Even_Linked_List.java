@@ -2,11 +2,11 @@ package com.lc.problem;
 
 import com.common.ListNode;
 
-public class LCL_0328_Odd_Even_Linked_List {
+public class LC_0328_Odd_Even_Linked_List {
 
 	
 	public static void main(String[] args) {
-		LCL_0328_Odd_Even_Linked_List obj = new LCL_0328_Odd_Even_Linked_List();
+		LC_0328_Odd_Even_Linked_List obj = new LC_0328_Odd_Even_Linked_List();
 		ListNode head = new ListNode(1);
 		head.next = new ListNode(2);
 		head.next.next = new ListNode(3);

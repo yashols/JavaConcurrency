@@ -1,5 +1,7 @@
 package com.lc.problem;
 
+import java.util.Stack;
+
 public class LC_0739_Daily_Temperatures {
 
 
@@ -12,18 +14,28 @@ public class LC_0739_Daily_Temperatures {
 
 
     public int[] dailyTemperatures(int[] temperatures) {
-        int[] response = new int[temperatures.length];
-
-        for (int i = 0; i < temperatures.length; ++i) {
-
-            for (int j = i; j < temperatures.length; ++j) {
-                if (temperatures[i] < temperatures[i]) {
-                    response[i] = j - i;
-                    break;
-                }
+    	int[] result = new int[temperatures.length];
+        Stack<int[]> stack = new Stack<>();
+        for(int i=0; i<temperatures.length; ++i) {
+            if(stack.isEmpty()) {
+                stack.push(new int[] {temperatures[i], i});
+                continue;
             }
-            
+            int[] top = stack.peek();
+            if(top[0] >= temperatures[i]) {
+                stack.push(new int[] {temperatures[i], i});
+            } else {
+                while(top[0] < temperatures[i]) {
+                    result[top[1]] = i-top[1];
+                    stack.pop();
+                    if(stack.isEmpty()) {
+                    	break;
+                    }
+                    top = stack.peek();
+                }
+                stack.push(new int[] {temperatures[i], i});
+            }
         }
-        return response;
+        return result;
     }
 }

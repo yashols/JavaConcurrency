@@ -7,10 +7,10 @@ import java.util.LinkedList;
  *
  * @author Yashol Sharma
  */
-public final class LC_239_Sliding_Window_Maximum {
+public final class LC_0239_Sliding_Window_Maximum {
 
 	public static void main(String args[]) {
-		LC_239_Sliding_Window_Maximum obj = new LC_239_Sliding_Window_Maximum();
+		LC_0239_Sliding_Window_Maximum obj = new LC_0239_Sliding_Window_Maximum();
 		int[] nums = { 1, 3, -1, -3, 5, 3, 6, 7 };
 		System.out.println(obj.maxSlidingWindow(nums, 3));
 	}
