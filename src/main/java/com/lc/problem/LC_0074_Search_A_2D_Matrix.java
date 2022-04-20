@@ -4,53 +4,41 @@ public class LC_0074_Search_A_2D_Matrix {
 
 	public static void main(String[] args) {
 		LC_0074_Search_A_2D_Matrix obj = new LC_0074_Search_A_2D_Matrix();
-		int[][] matrix = { { 1 } };
-		obj.searchMatrix(matrix, 2);
+		// int[][] matrix = { { 1, 3, 5, 7 }, { 10, 11, 16, 20 }, { 23, 30, 34, 60 } };
+		// int digit = 3;
+		// int[][] matrix = { { 1, 3, 5, 7 }, { 10, 11, 16, 20 }, { 23, 30, 34, 60 } };
+		// int digit = 13;
+		// int[][] matrix = { { 1, 1 } };
+		// int digit = 0;
+		// int[][] matrix = { { 1 } };
+		// int digit = 1;
+		int[][] matrix = { { 1, 1 } };
+		int digit = 2;
+		boolean result = obj.searchMatrix(matrix, digit);
+		System.out.println(result);
 	}
 
 	public boolean searchMatrix(int[][] matrix, int target) {
-		int row = findRow(matrix, target);
-		if(row == -1) {
+		int row = matrix.length;
+		int col = matrix[0].length;
+		return search(matrix, target, 0, row * col - 1);
+	}
+
+	private boolean search(int[][] matrix, int target, int left, int right) {
+		if (left > right) {
 			return false;
 		}
-		return findElement(matrix[row], target);
-	}
-
-	public boolean findElement(int[] row, int target) {
-		int low = 0;
-		int high = row.length;
-		while (low <= high) {
-			int element = low + (high - low) / 2;
-			if (row[element] == target) {
-				return true;
-			}
-			if (row[element] < target) {
-				low = element + 1;
-			} else {
-				high = element - 1;
-			}
+		int mid = left + (right - left) / 2;
+		int row = mid / matrix[0].length;
+		int col = mid % matrix[0].length;
+		if (matrix[row][col] == target) {
+			return true;
 		}
-		return false;
-	}
-
-	private int findRow(int[][] matrix, int target) {
-
-		int low = 0;
-		int high = matrix.length;
-		int row = 0;
-		while (low < high) {
-			row = low + (high - low) / 2;
-			if (matrix[row][0] == target) {
-				return row;
-			}
-			if (matrix[row][0] < target) {
-				low = row + 1;
-			} else {
-				high = row - 1;
-			}
+		if (matrix[row][col] < target) {
+			return search(matrix, target, mid + 1, right);
+		} else {
+			return search(matrix, target, left, mid - 1);
 		}
-		return low;
-
 	}
 
 }

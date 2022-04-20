@@ -1,6 +1,9 @@
 package com.lc.problem;
 
-import java.util.Stack;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Set;
 
 /**
  * LC_0003_Longest_Substr_wo_Repeating_Chars Description.
@@ -10,33 +13,30 @@ import java.util.Stack;
 public final class LC_0003 {
 	public static void main(String args[]) {
 		LC_0003 obj = new LC_0003();
-		int response = obj.lengthOfLongestSubstring("pwwkew");
+		int response = obj.lengthOfLongestSubstring("bbbbb");
 		System.out.println(response);
 	}
 
 	public int lengthOfLongestSubstring(String s) {
-		if (s == null) {
-			return 0;
-		}
-		if (s.length() == 1) {
-			return 1;
-		}
-		Stack<Character> stack = new Stack<>();
-		int totalLength = s.length();
-		int counter = 0;
-		int max = 0;
-		while (counter < totalLength) {
-			if (stack.contains(s.charAt(counter))) {
-				stack.remove(0);
-			} else {
-				stack.add(s.charAt(counter));
-				counter++;
+		Set<Character> set = new HashSet<>();
+		Queue<Character> queue = new LinkedList<>();
+		int result = 0;
+		for (int i = 0; i < s.length(); ++i) {
+			Character c = s.charAt(i);
+			if (set.contains(c)) {
+				Character qchar = queue.poll();
+				set.remove(qchar);
+				while (qchar != c) {
+					qchar = queue.poll();
+					set.remove(qchar);
+				}
 			}
-			if (max < stack.size()) {
-				max = stack.size();
-			}
+			set.add(c);
+			
+			queue.add(c);
+			result = Math.max(result, queue.size());
 		}
-		return max;
+		return Math.max(result, queue.size());
 	}
 
 }
